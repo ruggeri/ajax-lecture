@@ -12,8 +12,16 @@ class CatsController < ApplicationController
     render :index
   end
 
+  def search
+    @cats = Cat.where('name ~ ?', params[:query])
+
+    respond_to do |format|
+      format.json { render :index }
+    end
+  end
+
   private
-  def tweet_params
+  def cat_params
     params.require(:cat).permit(:name, :personal_legend)
   end
 end
