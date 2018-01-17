@@ -9,7 +9,12 @@
     <% @cats.each do |cat| %>
       <li>
         <%= cat.name %>
-        <button>Like? Unlike?</button>
+        <button
+          class='cat-like-toggle'
+          data-cat-id='<%= cat.id %>'
+          data-is-liked='<%= current_user.likes?(cat) %>'>
+          Like? Unlike?
+        </button>
       </li>
     <% end %>
   </ul>
