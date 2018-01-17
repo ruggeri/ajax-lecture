@@ -4,4 +4,5 @@ const SearchableCatsList = require('./searchable_cats_list');
 
 $(document).ready(() =>{
   $('button.cat-like-toggle').each((idx, el) => { new CatLikeToggle(el) });
+  $('.searchable-cats-list').each((idx, el) => { new SearchableCatsList(el) });
 });
