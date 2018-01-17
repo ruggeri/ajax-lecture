@@ -1,0 +1,35 @@
+<h1>Searchable Cats</h1>
+<ul class='searchable-cats-list'>
+  <label>
+    Search:
+    <input type="text">
+  </label>
+  <% @cats.each do |cat| %>
+    <li>
+      <%= cat.name %>
+      <button>Follow? Unfollow?</button>
+    </li>
+  <% end %>
+</ul>
+
+<h1>Create Your Own Cat!</h1>
+
+<h3>Recently created cats</h3>
+<ul id='recent-cats'></ul>
+
+<form class='cat-form'>
+  <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+
+  <label>
+    Name
+    <input type="text" name="cat[name]">
+  </label>
+
+  <label>
+    Personal legend
+    <textarea name="cat[personal_legend]"></textarea>
+  </label>
+</form>
