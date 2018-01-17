@@ -1,16 +1,19 @@
 <h1>Searchable Cats</h1>
-<ul class='searchable-cats-list'>
+<div class='searchable-cats-list'>
   <label>
     Search:
     <input type="text">
   </label>
-  <% @cats.each do |cat| %>
-    <li>
-      <%= cat.name %>
-      <button>Follow? Unfollow?</button>
-    </li>
-  <% end %>
-</ul>
+
+  <ul class='cats'>
+    <% @cats.each do |cat| %>
+      <li>
+        <%= cat.name %>
+        <button>Like? Unlike?</button>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 <h1>Create Your Own Cat!</h1>
 
@@ -32,4 +35,6 @@
     Personal legend
     <textarea name="cat[personal_legend]"></textarea>
   </label>
+
+  <input type="submit" value="Create Cat!">
 </form>
