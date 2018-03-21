@@ -11,7 +11,7 @@ class CatsController < ApplicationController
   end
 
   def search
-    @cats = Cat.where('name ~ ?', params[:query])
+    @cats = Cat.where('name ILIKE ?', "%#{params[:query]}%")
 
     render :index
   end
