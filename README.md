@@ -18,12 +18,12 @@
     3. Set prop to disabled while posting/deleting.
     4. Simple render method.
     5. Do appropriate AJAX method.
-    6. Use `dataType`. Talk about Accept header.
-    7. Look for class on button when document is ready. Instantiate
+    6. Look for class on button when document is ready. Instantiate
        CatLikeToggle.
 6. Search: First use jbuilder for showing list of cats.
     * Show how to use `column_names` to copy over fields.
     * Show how to make a custom field like `isLiked`.
+    * Use `dataType`. Talk about Accept header.
 7. Write searcher.
     1. Needs both an internal text input and a ul for results.
     2. Use `input` event.
