@@ -1,5 +1,6 @@
 class CatsController < ApplicationController
   def create
+    sleep 1
     @cat = Cat.create!(cat_params)
 
     render :show
