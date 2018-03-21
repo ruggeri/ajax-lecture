@@ -2,9 +2,7 @@ class CatsController < ApplicationController
   def create
     @cat = Cat.create!(cat_params)
 
-    respond_to do |format|
-      format.json { render :show }
-    end
+    render :show
   end
 
   def index
@@ -15,9 +13,7 @@ class CatsController < ApplicationController
   def search
     @cats = Cat.where('name ~ ?', params[:query])
 
-    respond_to do |format|
-      format.json { render :index }
-    end
+    render :index
   end
 
   private
